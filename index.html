@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flipflix Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <img src="https://i.ibb.co/MCBJcX6/movie-flix-logo.png" class="logo">
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">TV Shows</a>
+            <a href="#">Movies</a>
+            <a href="#">Latest</a>
+            <a href="#">My List</a>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Money Heist</h1>
+            <p>Thrilling heist story full of twists and emotion.</p>
+
+            <!-- IMPORTANT: Added id="playBtn" -->
+            <button id="playBtn" class="btn btn-red">▶ Play</button>
+            <button class="btn btn-light">ℹ More Info</button>
+        </div>
+    </section>
+
+    <!-- VIDEO PLAYER (Hidden Default) -->
+    <div style="text-align:center; margin-top:20px;">
+        <video id="myVideo" width="800" controls style="display:none; border-radius:10px;">
+            <source src="yourvideo.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Movie Rows -->
+    <section class="row">
+        <h2>Trending Now</h2>
+        <div class="row-posters">
+            <img src="https://media.telanganatoday.com/wp-content/uploads/2025/12/Dhurandhar-F-1.jpg" class="poster">
+            <img src="https://i.ytimg.com/vi/UGRd20aFMXw/maxresdefault.jpg" class="poster">
+            <img src="https://m.media-amazon.com/images/S/pv-target-images/372d878f32053d098ca65016ae2a1051e5680c96420b8972f563528ac6786253._UR1920,1080_.jpg" class="poster">
+            <img src="https://i.ytimg.com/vi/bqD9wm7KvO0/maxresdefault.jpg" class="poster">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEix4aSRlG73Oi1zOxEb692BdAxEYZ9qPKhiBhWInC8Fo6yIDGMY5BVbSD_ri3D4DdlGq3IB5xLJaXv92f2X79n6o4gB9KV1EVMHXj0nvb8uiOht6Rr7qt_DsuJ6D5BtsubVe3Igc6TiqTv0fsHQV7SJcdYt7mTFgMjvd2Jl9Y8DSMcWjgZYsattYVAHVcY/s1280/12.jpg" class="poster">
+        </div>
+    </section>
+
+    <section class="row">
+        <h2>Popular on Netflix</h2>
+        <div class="row-posters">
+            <img src="https://wallpapercave.com/wp/wp5118334.jpg" class="poster">
+            <img src="https://uinewz.com/wp-content/uploads/2023/07/Jawan-Poster.jpg" class="poster">
+            <img src="https://www.yashrajfilms.com/images/default-source/movies/saiyaara/saiyaara_767x430.jpg?sfvrsn=1d5fdecc_7" class="poster">
+            <img src="https://www.koimoi.com/wp-content/new-galleries/2016/07/m-s-dhoni-the-untold-story-poster-news.jpg" class="poster">
+            <img src="https://static.tnn.in/thumb/msid-109110665,thumbsize-90036,width-1280,height-720,resizemode-75/109110665.jpg?quality=100" class="poster">
+        </div>
+    </section>
+
+    <!-- VIDEO PLAY SCRIPT -->
+    <script>
+        const video = document.getElementById("myVideo");
+        const btn = document.getElementById("playBtn");
+
+        btn.onclick = () => {
+            video.style.display = "block";  
+            video.scrollIntoView({ behavior: "smooth" });
+            video.play();
+        };
+    </script>
+
+</body>
+</html>

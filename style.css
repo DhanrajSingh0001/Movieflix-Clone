@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #111;
+    color: white;
+    margin-top: 80px;   /* navbar ki height ke barabar */
+}
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    position: fixed;      /* always on top */
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(5px);
+    z-index: 10;
+}
+.logo {
+    width: 120px;
+    margin-right: 40px;
+}
+.navbar nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #bbb;
+    font-size: 15px;
+}
+.navbar nav a:hover {
+    color: white;
+}
+/* BANNER */
+.banner {
+    background-image: url("https://wedslearn.com/wp-content/uploads/2024/11/moviesflix-1-1-1200x675.png");
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    position: relative;
+}
+.banner-content {
+    position: absolute;
+    bottom: 100px;
+    left: 40px;
+}
+.banner h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+.banner p {
+    width: 40%;
+    margin: 10px 0;
+    font-size: 18px;
+    color: #ddd;
+}
+.btn {
+    background-color: white;
+    color: black;
+    padding: 10px 25px;
+    border: none;
+    margin-right: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-light {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+/* MOVIE ROWS */
+.row {
+    margin: 20px;
+}         
+
+.row h2 {
+    margin-bottom: 10px;
+
+}
+
+.row-posters {
+    display: flex;
+    gap: 15px;
+    overflow-x: scroll;
+    padding-bottom: 10px;
+}
+
+.poster {
+    width: 200px;
+    border-radius: 4px;
+    transition: transform 0.3s;
+}
+
+.poster:hover {
+    transform: scale(1.1);
+}
